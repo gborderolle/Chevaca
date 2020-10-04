@@ -79,7 +79,7 @@ namespace Chevaca.Pages
                             }
                             #endregion
 
-                            Response.Redirect("Datos", false);
+                            Response.Redirect("/Pages/Datos", false);
                         }
                         else
                         {

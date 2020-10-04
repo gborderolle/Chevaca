@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#"MasterPageFile="~/External.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Chevaca.Pages.Login" Title="Chevaca Agrotecnología" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/External.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Chevaca.Pages.Login" Title="Chevaca Agrotecnología" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="HeadContent" runat="server">
     <!-- STYLES EXTENSION -->
@@ -19,7 +19,7 @@
         }
 
         .grand {
-            background-image: url('/Content/img/Background.jpg');
+            background-image: url('/Content/img/Chevaca_background.jpg');
             position: absolute;
             width: 100%;
             min-height: 100%;
@@ -36,7 +36,6 @@
 
     <!-- PAGE JS -->
     <script type="text/javascript" src="../Content/js/pages/login.js"></script>
-    <script type="text/javascript" src=""></script>
 
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
