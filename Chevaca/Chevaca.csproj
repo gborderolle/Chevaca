@@ -217,6 +217,7 @@
     <Content Include="Content\bootstrap\js\bootstrap.js" />
     <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap\js\tether.min.js" />
+    <Content Include="Content\css\helpers\modal_styles.css" />
     <Content Include="Content\css\libs\jquery-ui.css" />
     <Content Include="Content\css\libs\jquery-ui.min.css" />
     <Content Include="Content\css\libs\jquery-ui.structure.css" />

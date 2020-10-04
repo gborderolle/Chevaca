@@ -4,12 +4,13 @@
 <%@ Register Src="~/User_Controls/Vacas.ascx" TagPrefix="uc1" TagName="Vacas" %>
 <%@ Register Src="~/User_Controls/Ovejas.ascx" TagPrefix="uc1" TagName="Ovejas" %>
 
-<asp:content id="Content3" contentplaceholderid="HeadContent" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="HeadContent" runat="server">
 
     <!-- STYLES EXTENSION -->
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="../Content/css/pages/info_boxes.min.css" />
+    <%--<link rel="stylesheet" href="../Content/css/pages/info_boxes.min.css" />--%>
+    <link rel="stylesheet" href="../Content/css/pages/info_boxes2.css" />
     <link rel="stylesheet" href="../Content/css/pages/datos.css" />
 
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -36,9 +37,9 @@
 <![endif]-->
 
 
-</asp:content>
+</asp:Content>
 
-<asp:content id="Content2" contentplaceholderid="SubbodyContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="SubbodyContent" runat="server">
 
     <!-- PAGE SCRIPTS -->
     <!-- Morris.js charts -->
@@ -74,25 +75,25 @@
     <script type="text/javascript" src="../Content/js/pages/datos.js"></script>
     <script type="text/javascript" src="../Content/js/libs/jquery.tablesorter.js"></script>
 
-</asp:content>
+    <!-- PAGE CSS -->
+    <script type="text/javascript" src="../Content/css/helpers/modal_styles.css"></script>
 
-<asp:content id="Content1" contentplaceholderid="MainContent" runat="server">
+</asp:Content>
 
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper1">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>Base de datos
+    <!-- Navegación -->
+    <section class="content-header">
+        <h1>Base de datos
         <a href="/Pages/Datos.aspx"><small style="color: black">Datos estáticos</small></a>
-                <small>| </small>
-                <a href="/Pages/Datos_configuracion.aspx"><small>Datos de configuración</small></a>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i>Inicio</a></li>
-                <li class="active">Base de datos</li>
-            </ol>
-        </section>
+            <small>| </small>
+            <a href=""><small>Datos de configuración</small></a>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>Inicio</a></li>
+            <li class="active">Base de datos</li>
+        </ol>
+    </section>
 
         <!-- Main content -->
         <section class="content">
@@ -110,7 +111,7 @@
                     </div>
                     <!-- /.info-box -->
                 </div>
-                
+
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box box-selected" id="divBoxVacas">
                         <span class="info-box-icon bg-purple"><i class="fa fa-dog"></i></span>
@@ -176,27 +177,27 @@
                                 <div id="divContent" style="overflow: auto;">
 
                                     <div class="divTables" id="divUsuarios" style="display: block;">
-                                        <asp:UpdatePanel ID="upUsuarios" runat="server">
+                                        <asp:updatepanel id="upUsuarios" runat="server">
                                             <ContentTemplate>
                                                 <uc1:Usuarios runat="server" ID="Usuarios" />
                                             </ContentTemplate>
-                                        </asp:UpdatePanel>
+                                        </asp:updatepanel>
                                     </div>
-                                     <div class="divTables" id="divVacas" style="display: none;">
-                                        <asp:UpdatePanel ID="upVacas" runat="server">
+                                    <div class="divTables" id="divVacas" style="display: none;">
+                                        <asp:updatepanel id="upVacas" runat="server">
                                             <ContentTemplate>
                                                 <uc1:Vacas runat="server" ID="Vacas" />
                                             </ContentTemplate>
-                                        </asp:UpdatePanel>
+                                        </asp:updatepanel>
                                     </div>
                                     <div class="divTables" id="divOvejas" style="display: none;">
-                                        <asp:UpdatePanel ID="upOvejas" runat="server">
+                                        <asp:updatepanel id="upOvejas" runat="server">
                                             <ContentTemplate>
                                                 <uc1:Ovejas runat="server" ID="Ovejas" />
                                             </ContentTemplate>
-                                        </asp:UpdatePanel>
+                                        </asp:updatepanel>
                                     </div>
-                                                  
+
                                 </div>
                             </div>
 
@@ -215,9 +216,7 @@
             <!-- =========================================================== -->
         </section>
         <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
 
 
 
-</asp:content>
+</asp:Content>
