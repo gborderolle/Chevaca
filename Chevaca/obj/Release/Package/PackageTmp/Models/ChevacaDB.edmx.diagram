@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ea5422da8a0549c18575eae1e00280bd" Name="Diagram1">
+        <EntityTypeShape EntityType="chevacadbModel.aportes_energias" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="chevacadbModel.aportes_proteinas" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="chevacadbModel.bebederos" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="chevacadbModel.camioneros" Width="1.5" PointX="4.75" PointY="2.75" />
+        <EntityTypeShape EntityType="chevacadbModel.clientes" Width="1.5" PointX="4.75" PointY="5.75" />
+        <EntityTypeShape EntityType="chevacadbModel.comederos" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="chevacadbModel.dormideros" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="chevacadbModel.escritorio_rurales" Width="1.5" PointX="6.75" PointY="2.75" />
+        <EntityTypeShape EntityType="chevacadbModel.estancia_campos" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="chevacadbModel.estancia_campos_padrones" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="chevacadbModel.estancia_campos_potreros" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="chevacadbModel.estancias" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="chevacadbModel.frigorificos" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="chevacadbModel.historial_animales_concursos" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="chevacadbModel.historial_animales_enfermedades" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="chevacadbModel.historial_animales_ingestas" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="chevacadbModel.historial_animales_pesadas" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="chevacadbModel.historial_animales_vacunas" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="chevacadbModel.ingeniero_agronomos" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="chevacadbModel.lista_animales_categorias" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="chevacadbModel.lista_animales_razas" Width="1.5" PointX="10.75" PointY="9.75" />
+        <EntityTypeShape EntityType="chevacadbModel.logs" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="chevacadbModel.lotes" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="chevacadbModel.ovejas_historial_concursos" Width="1.5" PointX="12.75" PointY="2.75" />
+        <EntityTypeShape EntityType="chevacadbModel.ovejas_historial_enfermedades" Width="1.5" PointX="4.75" PointY="12.75" />
+        <EntityTypeShape EntityType="chevacadbModel.ovejas_historial_ingestas" Width="1.5" PointX="12.75" PointY="5.75" />
+        <EntityTypeShape EntityType="chevacadbModel.ovejas_historial_pesadas" Width="1.5" PointX="6.75" PointY="12.75" />
+        <EntityTypeShape EntityType="chevacadbModel.ovejas_historial_vacunas" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="chevacadbModel.proveedores" Width="1.5" PointX="8.75" PointY="12.75" />
+        <EntityTypeShape EntityType="chevacadbModel.raciones" Width="1.5" PointX="10.75" PointY="12.75" />
+        <EntityTypeShape EntityType="chevacadbModel.raciones_prestaciones" Width="1.5" PointX="12.75" PointY="11.75" />
+        <EntityTypeShape EntityType="chevacadbModel.raciones_proveedores" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="chevacadbModel.trabajadores" Width="1.5" PointX="14.75" PointY="3.75" />
+        <EntityTypeShape EntityType="chevacadbModel.trabajadores_perros" Width="1.5" PointX="14.75" PointY="6.75" />
+        <EntityTypeShape EntityType="chevacadbModel.usuarios" Width="1.5" PointX="14.75" PointY="9.75" />
+        <EntityTypeShape EntityType="chevacadbModel.vacas_historial_concursos" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="chevacadbModel.vacas_historial_enfermedades" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="chevacadbModel.vacas_historial_ingestas" Width="1.5" PointX="2.75" PointY="15.75" />
+        <EntityTypeShape EntityType="chevacadbModel.vacas_historial_pesadas" Width="1.5" PointX="4.75" PointY="15.75" />
+        <EntityTypeShape EntityType="chevacadbModel.vacas_historial_vacunas" Width="1.5" PointX="6.75" PointY="15.75" />
+        <EntityTypeShape EntityType="chevacadbModel.veterinarias" Width="1.5" PointX="8.75" PointY="15.75" />
+        <EntityTypeShape EntityType="chevacadbModel.ovejas" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="chevacadbModel.vacas" Width="1.5" PointX="11.75" PointY="15.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

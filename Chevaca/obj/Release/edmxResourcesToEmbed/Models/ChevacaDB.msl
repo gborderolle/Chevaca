@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="chevacadbModelStoreContainer" CdmEntityContainer="ChevacaDB1">
+    <EntitySetMapping Name="aportes_energias">
+      <EntityTypeMapping TypeName="chevacadbModel.aportes_energias">
+        <MappingFragment StoreEntitySet="aportes_energias">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Aporte_energia_ID" ColumnName="Aporte_energia_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aportes_proteinas">
+      <EntityTypeMapping TypeName="chevacadbModel.aportes_proteinas">
+        <MappingFragment StoreEntitySet="aportes_proteinas">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Aporte_proteina_ID" ColumnName="Aporte_proteina_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bebederos">
+      <EntityTypeMapping TypeName="chevacadbModel.bebederos">
+        <MappingFragment StoreEntitySet="bebederos">
+          <ScalarProperty Name="Bebedero_ID" ColumnName="Bebedero_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="camioneros">
+      <EntityTypeMapping TypeName="chevacadbModel.camioneros">
+        <MappingFragment StoreEntitySet="camioneros">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Camionero_ID" ColumnName="Camionero_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientes">
+      <EntityTypeMapping TypeName="chevacadbModel.clientes">
+        <MappingFragment StoreEntitySet="clientes">
+          <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comederos">
+      <EntityTypeMapping TypeName="chevacadbModel.comederos">
+        <MappingFragment StoreEntitySet="comederos">
+          <ScalarProperty Name="Comedero_ID" ColumnName="Comedero_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dormideros">
+      <EntityTypeMapping TypeName="chevacadbModel.dormideros">
+        <MappingFragment StoreEntitySet="dormideros">
+          <ScalarProperty Name="Dormidero_ID" ColumnName="Dormidero_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="escritorio_rurales">
+      <EntityTypeMapping TypeName="chevacadbModel.escritorio_rurales">
+        <MappingFragment StoreEntitySet="escritorio_rurales">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Escritorio_rural_ID" ColumnName="Escritorio_rural_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estancia_campos">
+      <EntityTypeMapping TypeName="chevacadbModel.estancia_campos">
+        <MappingFragment StoreEntitySet="estancia_campos">
+          <ScalarProperty Name="Estancia_ID" ColumnName="Estancia_ID" />
+          <ScalarProperty Name="Estancia_campos_ID" ColumnName="Estancia_campos_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estancia_campos_padrones">
+      <EntityTypeMapping TypeName="chevacadbModel.estancia_campos_padrones">
+        <MappingFragment StoreEntitySet="estancia_campos_padrones">
+          <ScalarProperty Name="Estancia_ID" ColumnName="Estancia_ID" />
+          <ScalarProperty Name="Estancia_campos_padrones_ID" ColumnName="Estancia_campos_padrones_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estancia_campos_potreros">
+      <EntityTypeMapping TypeName="chevacadbModel.estancia_campos_potreros">
+        <MappingFragment StoreEntitySet="estancia_campos_potreros">
+          <ScalarProperty Name="Estancia_ID" ColumnName="Estancia_ID" />
+          <ScalarProperty Name="Estancia_campos_potreros_ID" ColumnName="Estancia_campos_potreros_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estancias">
+      <EntityTypeMapping TypeName="chevacadbModel.estancias">
+        <MappingFragment StoreEntitySet="estancias">
+          <ScalarProperty Name="Cliente_ID" ColumnName="Cliente_ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Estancia_ID" ColumnName="Estancia_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="frigorificos">
+      <EntityTypeMapping TypeName="chevacadbModel.frigorificos">
+        <MappingFragment StoreEntitySet="frigorificos">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Frigorifico_ID" ColumnName="Frigorifico_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historial_animales_concursos">
+      <EntityTypeMapping TypeName="chevacadbModel.historial_animales_concursos">
+        <MappingFragment StoreEntitySet="historial_animales_concursos">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_concursos_ID" ColumnName="Historial_animales_concursos_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historial_animales_enfermedades">
+      <EntityTypeMapping TypeName="chevacadbModel.historial_animales_enfermedades">
+        <MappingFragment StoreEntitySet="historial_animales_enfermedades">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_enfermedades_ID" ColumnName="Historial_animales_enfermedades_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historial_animales_ingestas">
+      <EntityTypeMapping TypeName="chevacadbModel.historial_animales_ingestas">
+        <MappingFragment StoreEntitySet="historial_animales_ingestas">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_ingestas_ID" ColumnName="Historial_animales_ingestas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historial_animales_pesadas">
+      <EntityTypeMapping TypeName="chevacadbModel.historial_animales_pesadas">
+        <MappingFragment StoreEntitySet="historial_animales_pesadas">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Historial_animales_pesadas_ID" ColumnName="Historial_animales_pesadas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historial_animales_vacunas">
+      <EntityTypeMapping TypeName="chevacadbModel.historial_animales_vacunas">
+        <MappingFragment StoreEntitySet="historial_animales_vacunas">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_vacunas_ID" ColumnName="Historial_animales_vacunas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ingeniero_agronomos">
+      <EntityTypeMapping TypeName="chevacadbModel.ingeniero_agronomos">
+        <MappingFragment StoreEntitySet="ingeniero_agronomos">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Ingeniero_agronomo_ID" ColumnName="Ingeniero_agronomo_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lista_animales_categorias">
+      <EntityTypeMapping TypeName="chevacadbModel.lista_animales_categorias">
+        <MappingFragment StoreEntitySet="lista_animales_categorias">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Lista_animales_categorias_ID" ColumnName="Lista_animales_categorias_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lista_animales_razas">
+      <EntityTypeMapping TypeName="chevacadbModel.lista_animales_razas">
+        <MappingFragment StoreEntitySet="lista_animales_razas">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Lista_animales_razas_ID" ColumnName="Lista_animales_razas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logs">
+      <EntityTypeMapping TypeName="chevacadbModel.logs">
+        <MappingFragment StoreEntitySet="logs">
+          <ScalarProperty Name="Dato_afectado" ColumnName="Dato_afectado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IP_client" ColumnName="IP_client" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Fecha_creado" ColumnName="Fecha_creado" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="Log_ID" ColumnName="Log_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lotes">
+      <EntityTypeMapping TypeName="chevacadbModel.lotes">
+        <MappingFragment StoreEntitySet="lotes">
+          <ScalarProperty Name="Lote_ID" ColumnName="Lote_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ovejas_historial_concursos">
+      <EntityTypeMapping TypeName="chevacadbModel.ovejas_historial_concursos">
+        <MappingFragment StoreEntitySet="ovejas_historial_concursos">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_concursos_ID" ColumnName="Historial_animales_concursos_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ovejas_historial_enfermedades">
+      <EntityTypeMapping TypeName="chevacadbModel.ovejas_historial_enfermedades">
+        <MappingFragment StoreEntitySet="ovejas_historial_enfermedades">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_enfermedades_ID" ColumnName="Historial_animales_enfermedades_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ovejas_historial_ingestas">
+      <EntityTypeMapping TypeName="chevacadbModel.ovejas_historial_ingestas">
+        <MappingFragment StoreEntitySet="ovejas_historial_ingestas">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_ingestas_ID" ColumnName="Historial_animales_ingestas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ovejas_historial_pesadas">
+      <EntityTypeMapping TypeName="chevacadbModel.ovejas_historial_pesadas">
+        <MappingFragment StoreEntitySet="ovejas_historial_pesadas">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Historial_animales_pesadas_ID" ColumnName="Historial_animales_pesadas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ovejas_historial_vacunas">
+      <EntityTypeMapping TypeName="chevacadbModel.ovejas_historial_vacunas">
+        <MappingFragment StoreEntitySet="ovejas_historial_vacunas">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_vacunas_ID" ColumnName="Historial_animales_vacunas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proveedores">
+      <EntityTypeMapping TypeName="chevacadbModel.proveedores">
+        <MappingFragment StoreEntitySet="proveedores">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Proveedor_ID" ColumnName="Proveedor_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="raciones">
+      <EntityTypeMapping TypeName="chevacadbModel.raciones">
+        <MappingFragment StoreEntitySet="raciones">
+          <ScalarProperty Name="Aportes_proteina_ID" ColumnName="Aportes_proteina_ID" />
+          <ScalarProperty Name="Aportes_mineral_ID" ColumnName="Aportes_mineral_ID" />
+          <ScalarProperty Name="Aportes_energia_ID" ColumnName="Aportes_energia_ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Racion_ID" ColumnName="Racion_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="raciones_prestaciones">
+      <EntityTypeMapping TypeName="chevacadbModel.raciones_prestaciones">
+        <MappingFragment StoreEntitySet="raciones_prestaciones">
+          <ScalarProperty Name="Raciones_ID" ColumnName="Raciones_ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Racion_prestacion_ID" ColumnName="Racion_prestacion_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="raciones_proveedores">
+      <EntityTypeMapping TypeName="chevacadbModel.raciones_proveedores">
+        <MappingFragment StoreEntitySet="raciones_proveedores">
+          <ScalarProperty Name="Raciones_ID" ColumnName="Raciones_ID" />
+          <ScalarProperty Name="Raciones_proveedor_ID" ColumnName="Raciones_proveedor_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trabajadores">
+      <EntityTypeMapping TypeName="chevacadbModel.trabajadores">
+        <MappingFragment StoreEntitySet="trabajadores">
+          <ScalarProperty Name="Estancia_ID" ColumnName="Estancia_ID" />
+          <ScalarProperty Name="Trabajador_ID" ColumnName="Trabajador_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trabajadores_perros">
+      <EntityTypeMapping TypeName="chevacadbModel.trabajadores_perros">
+        <MappingFragment StoreEntitySet="trabajadores_perros">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Trabajador_perro_ID" ColumnName="Trabajador_perro_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="chevacadbModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="Rol_usuario_ID" ColumnName="Rol_usuario_ID" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vacas_historial_concursos">
+      <EntityTypeMapping TypeName="chevacadbModel.vacas_historial_concursos">
+        <MappingFragment StoreEntitySet="vacas_historial_concursos">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_concursos_ID" ColumnName="Historial_animales_concursos_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vacas_historial_enfermedades">
+      <EntityTypeMapping TypeName="chevacadbModel.vacas_historial_enfermedades">
+        <MappingFragment StoreEntitySet="vacas_historial_enfermedades">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_enfermedades_ID" ColumnName="Historial_animales_enfermedades_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vacas_historial_ingestas">
+      <EntityTypeMapping TypeName="chevacadbModel.vacas_historial_ingestas">
+        <MappingFragment StoreEntitySet="vacas_historial_ingestas">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_ingestas_ID" ColumnName="Historial_animales_ingestas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vacas_historial_pesadas">
+      <EntityTypeMapping TypeName="chevacadbModel.vacas_historial_pesadas">
+        <MappingFragment StoreEntitySet="vacas_historial_pesadas">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Historial_animales_pesadas_ID" ColumnName="Historial_animales_pesadas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vacas_historial_vacunas">
+      <EntityTypeMapping TypeName="chevacadbModel.vacas_historial_vacunas">
+        <MappingFragment StoreEntitySet="vacas_historial_vacunas">
+          <ScalarProperty Name="Animal_ID" ColumnName="Animal_ID" />
+          <ScalarProperty Name="Historial_animales_vacunas_ID" ColumnName="Historial_animales_vacunas_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="veterinarias">
+      <EntityTypeMapping TypeName="chevacadbModel.veterinarias">
+        <MappingFragment StoreEntitySet="veterinarias">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Veterinaria_ID" ColumnName="Veterinaria_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ovejas">
+      <EntityTypeMapping TypeName="chevacadbModel.ovejas">
+        <MappingFragment StoreEntitySet="ovejas">
+          <ScalarProperty Name="Lista_animales_categorias_ID" ColumnName="Lista_animales_categorias_ID" />
+          <ScalarProperty Name="Lista_animales_razas_ID" ColumnName="Lista_animales_razas_ID" />
+          <ScalarProperty Name="Estancia_ID" ColumnName="Estancia_ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Oveja_ID" ColumnName="Oveja_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vacas">
+      <EntityTypeMapping TypeName="chevacadbModel.vacas">
+        <MappingFragment StoreEntitySet="vacas">
+          <ScalarProperty Name="MGAP_ID" ColumnName="MGAP_ID" />
+          <ScalarProperty Name="Lista_animales_categorias_ID" ColumnName="Lista_animales_categorias_ID" />
+          <ScalarProperty Name="Lista_animales_razas_ID" ColumnName="Lista_animales_razas_ID" />
+          <ScalarProperty Name="Estancia_ID" ColumnName="Estancia_ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Vaca_ID" ColumnName="Vaca_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
