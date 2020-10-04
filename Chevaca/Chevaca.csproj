@@ -1110,6 +1110,7 @@
     <Content Include="Content\js\libs\popbox.js" />
     <Content Include="Content\js\pages\datos.js" />
     <Content Include="Content\js\pages\login.js" />
+    <Content Include="Content\js\pages\syslogs.js" />
     <Content Include="Content\js\Testing.js" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1257,6 +1258,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Pages\Syslogs.aspx" />
     <Content Include="User_Controls\Ovejas.ascx" />
     <Content Include="User_Controls\Usuarios.ascx" />
     <Content Include="User_Controls\Vacas.ascx" />
@@ -1598,6 +1600,13 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Pages\Syslogs.aspx.cs">
+      <DependentUpon>Syslogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Syslogs.aspx.designer.cs">
+      <DependentUpon>Syslogs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User_Controls\Ovejas.ascx.cs">
       <DependentUpon>Ovejas.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
