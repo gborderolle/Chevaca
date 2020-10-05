@@ -19,7 +19,7 @@
         }
 
         .grand {
-            background-image: url('/Content/img/Background.jpg');
+            background-image: url('/Content/img/Chevaca_background.jpg');
             position: absolute;
             width: 100%;
             min-height: 100%;
@@ -43,7 +43,7 @@
 
     <div class="generalContainer grand">
 
-        <div class="loginFormContainer col-md-3 col-sm-10 col-xs-12">
+        <div class="loginFormContainer col-lg-3 col-md-6 col-sm-10 col-xs-12">
             <div class="loginTitleArea unselectable">
                 <img class="loginTitleImage pull-left" src="/Content/img/login.png" />
                 <div class="loginTitleBread">Chevaca Agrotecnología</div>

@@ -17,7 +17,7 @@
     <meta property="og:locale" content="es_ES" />
     <%--<meta property="og:url" content="https://www.example.com/webpage/" />--%>
 
-    <link rel="icon" href="Content/img/Cartelux-bolas-ico2.ico" />
+    <link rel="icon" href="/Content/img/Chevacalogo.ico" />
     <webopt:BundleReference runat="server" Path="~/Content/css" />
 
     <script type="text/javascript" src="/Content/js/libs/jquery.js"></script>
@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="/Content/bootstrap/css/tether-theme-arrows.min.css" />
     <link rel="stylesheet" href="/Content/bootstrap/css/tether-theme-arrows-dark.min.css" />
     <link rel="stylesheet" href="/Content/bootstrap/css/tether-theme-basic.min.css" />
-    <link rel="stylesheet" href="/Content/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <style type="text/css">
         .container-full {
