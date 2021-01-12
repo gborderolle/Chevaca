@@ -48,6 +48,7 @@
         <EntityTypeShape EntityType="chevacadbModel.veterinarias" Width="1.5" PointX="8.75" PointY="15.75" />
         <EntityTypeShape EntityType="chevacadbModel.ovejas" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="chevacadbModel.vacas" Width="1.5" PointX="11.75" PointY="15.75" />
+        <EntityTypeShape EntityType="chevacadbModel.logs_API" Width="1.5" PointX="14.375" PointY="15.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

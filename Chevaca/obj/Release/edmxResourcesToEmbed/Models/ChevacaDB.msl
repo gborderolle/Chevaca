@@ -365,5 +365,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="logs_API">
+      <EntityTypeMapping TypeName="chevacadbModel.logs_API">
+        <MappingFragment StoreEntitySet="logs_API">
+          <ScalarProperty Name="Dato_completo" ColumnName="Dato_completo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Log_API_ID" ColumnName="Log_API_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

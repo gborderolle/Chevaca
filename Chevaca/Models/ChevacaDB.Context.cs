@@ -68,5 +68,6 @@ namespace Chevaca.Models
         public virtual DbSet<veterinarias> veterinarias { get; set; }
         public virtual DbSet<ovejas> ovejas { get; set; }
         public virtual DbSet<vacas> vacas { get; set; }
+        public virtual DbSet<logs_API> logs_API { get; set; }
     }
 }

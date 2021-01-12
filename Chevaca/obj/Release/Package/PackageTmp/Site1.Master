@@ -108,7 +108,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="#">Chevaca Agrotectnología</a>
+                    <a class="navbar-brand" runat="server" href="#">Chevaca Agrotecnología</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -116,6 +116,7 @@
                         <li><a runat="server" href="/Pages/Datos">Base de datos</a></li>
                         <li><a runat="server" href="/Pages/Syslogs">Logs</a></li>
                         <li><a runat="server" href="">Configuración</a></li>
+                        <li><a runat="server" href="/Pages/GMaps">Google Maps</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

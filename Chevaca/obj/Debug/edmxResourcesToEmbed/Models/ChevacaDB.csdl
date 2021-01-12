@@ -44,6 +44,7 @@
     <EntitySet Name="veterinarias" EntityType="chevacadbModel.veterinarias" />
     <EntitySet Name="ovejas" EntityType="chevacadbModel.ovejas" />
     <EntitySet Name="vacas" EntityType="chevacadbModel.vacas" />
+    <EntitySet Name="logs_API" EntityType="chevacadbModel.logs_API" />
   </EntityContainer>
   <EntityType Name="aportes_energias">
     <Key>
@@ -365,5 +366,15 @@
     <Property Name="Lista_animales_razas_ID" Type="Int32" />
     <Property Name="Lista_animales_categorias_ID" Type="Int32" />
     <Property Name="MGAP_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="logs_API">
+    <Key>
+      <PropertyRef Name="Log_API_ID" />
+    </Key>
+    <Property Name="Log_API_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Dato_completo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Dato_largo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Metodo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

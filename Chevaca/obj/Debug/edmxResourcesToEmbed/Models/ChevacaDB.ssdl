@@ -158,6 +158,16 @@
     <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Dato_afectado" Type="varchar" MaxLength="150" Nullable="false" />
   </EntityType>
+  <EntityType Name="logs_API">
+    <Key>
+      <PropertyRef Name="Log_API_ID" />
+    </Key>
+    <Property Name="Log_API_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Dato_completo" Type="varchar" MaxLength="150" />
+    <Property Name="Dato_largo" Type="varchar(max)" />
+    <Property Name="Metodo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="lotes">
     <Key>
       <PropertyRef Name="Lote_ID" />
@@ -344,6 +354,7 @@
     <EntitySet Name="lista_animales_categorias" EntityType="Self.lista_animales_categorias" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="lista_animales_razas" EntityType="Self.lista_animales_razas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="logs" EntityType="Self.logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="logs_API" EntityType="Self.logs_API" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="lotes" EntityType="Self.lotes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ovejas" EntityType="Self.ovejas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ovejas_historial_concursos" EntityType="Self.ovejas_historial_concursos" Schema="dbo" store:Type="Tables" />

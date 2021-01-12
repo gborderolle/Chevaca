@@ -81,9 +81,22 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -246,6 +259,7 @@
     <Content Include="Content\js\libs\jquery.qtip.min.js" />
     <Content Include="Content\js\libs\jquery.quicksearch.js" />
     <Content Include="Content\js\libs\jquery.tablesorter.js" />
+    <Content Include="Content\js\libs\locationpicker.jquery.js" />
     <Content Include="Content\js\libs\moment.js" />
     <Content Include="Content\js\libs\MonthPicker.js" />
     <Content Include="Content\js\libs\plugins\bootstrap-slider\bootstrap-slider.js" />
@@ -1129,7 +1143,9 @@
     <Content Include="Models\ChevacaDB.edmx.diagram">
       <DependentUpon>ChevacaDB.edmx</DependentUpon>
     </Content>
+    <Content Include="Pages\GMaps.aspx" />
     <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Testing.aspx" />
     <Content Include="Scripts\bootstrap.js+" />
     <Content Include="Scripts\bootstrap.min.js+" />
     <Content Include="External.Master" />
@@ -1392,6 +1408,7 @@
     <Compile Include="Global_Objects\GlobalVariables.cs" />
     <Compile Include="Global_Objects\Logs.cs" />
     <Compile Include="Global_Objects\Utilities.cs" />
+    <Compile Include="GMapsController.cs" />
     <Compile Include="Models\aportes_energias.cs">
       <DependentUpon>ChevacaDB.tt</DependentUpon>
     </Compile>
@@ -1474,6 +1491,9 @@
     <Compile Include="Models\logs.cs">
       <DependentUpon>ChevacaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\logs_API.cs">
+      <DependentUpon>ChevacaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lotes.cs">
       <DependentUpon>ChevacaDB.tt</DependentUpon>
     </Compile>
@@ -1544,12 +1564,26 @@
     <Compile Include="Pages\Datos.aspx.designer.cs">
       <DependentUpon>Datos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\GMaps.aspx.cs">
+      <DependentUpon>GMaps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GMaps.aspx.designer.cs">
+      <DependentUpon>GMaps.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Testing.aspx.cs">
+      <DependentUpon>Testing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Testing.aspx.designer.cs">
+      <DependentUpon>Testing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Mobile.Master.cs">
