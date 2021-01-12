@@ -169,9 +169,15 @@
           </Key>
           <Property Name="Log_API_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Fecha" Type="datetime" Nullable="false" />
-          <Property Name="Dato_completo" Type="varchar" MaxLength="150" />
-          <Property Name="Dato_largo" Type="varchar(max)" />
           <Property Name="Metodo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Body" Type="varchar(max)" />
+          <Property Name="JSON" Type="varchar" MaxLength="200" />
+          <Property Name="Gateway" Type="varchar" MaxLength="50" />
+          <Property Name="Nodo" Type="varchar" MaxLength="50" />
+          <Property Name="Altitud" Type="int" />
+          <Property Name="Hdop" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="Latitud" Type="decimal" Precision="17" Scale="13" />
+          <Property Name="Longitud" Type="decimal" Precision="17" Scale="13" />
         </EntityType>
         <EntityType Name="lotes">
           <Key>
@@ -759,9 +765,15 @@
           </Key>
           <Property Name="Log_API_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Dato_completo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="Dato_largo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Metodo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="JSON" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Gateway" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nodo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Altitud" Type="Int32" />
+          <Property Name="Hdop" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="Latitud" Type="Decimal" Precision="17" Scale="13" />
+          <Property Name="Longitud" Type="Decimal" Precision="17" Scale="13" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -1136,9 +1148,15 @@
           <EntitySetMapping Name="logs_API">
             <EntityTypeMapping TypeName="chevacadbModel.logs_API">
               <MappingFragment StoreEntitySet="logs_API">
+                <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+                <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+                <ScalarProperty Name="Hdop" ColumnName="Hdop" />
+                <ScalarProperty Name="Altitud" ColumnName="Altitud" />
+                <ScalarProperty Name="Nodo" ColumnName="Nodo" />
+                <ScalarProperty Name="Gateway" ColumnName="Gateway" />
+                <ScalarProperty Name="JSON" ColumnName="JSON" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
                 <ScalarProperty Name="Metodo" ColumnName="Metodo" />
-                <ScalarProperty Name="Dato_largo" ColumnName="Dato_largo" />
-                <ScalarProperty Name="Dato_completo" ColumnName="Dato_completo" />
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
                 <ScalarProperty Name="Log_API_ID" ColumnName="Log_API_ID" />
               </MappingFragment>

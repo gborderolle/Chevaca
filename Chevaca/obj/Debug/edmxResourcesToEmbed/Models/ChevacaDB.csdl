@@ -373,8 +373,14 @@
     </Key>
     <Property Name="Log_API_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="Dato_completo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="Dato_largo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Metodo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="JSON" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Gateway" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nodo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Altitud" Type="Int32" />
+    <Property Name="Hdop" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="Latitud" Type="Decimal" Precision="17" Scale="13" />
+    <Property Name="Longitud" Type="Decimal" Precision="17" Scale="13" />
   </EntityType>
 </Schema>

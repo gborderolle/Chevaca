@@ -368,9 +368,15 @@
     <EntitySetMapping Name="logs_API">
       <EntityTypeMapping TypeName="chevacadbModel.logs_API">
         <MappingFragment StoreEntitySet="logs_API">
+          <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+          <ScalarProperty Name="Latitud" ColumnName="Latitud" />
+          <ScalarProperty Name="Hdop" ColumnName="Hdop" />
+          <ScalarProperty Name="Altitud" ColumnName="Altitud" />
+          <ScalarProperty Name="Nodo" ColumnName="Nodo" />
+          <ScalarProperty Name="Gateway" ColumnName="Gateway" />
+          <ScalarProperty Name="JSON" ColumnName="JSON" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
           <ScalarProperty Name="Metodo" ColumnName="Metodo" />
-          <ScalarProperty Name="Dato_largo" ColumnName="Dato_largo" />
-          <ScalarProperty Name="Dato_completo" ColumnName="Dato_completo" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="Log_API_ID" ColumnName="Log_API_ID" />
         </MappingFragment>

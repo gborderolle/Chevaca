@@ -37,6 +37,20 @@ namespace Chevaca.Global_Objects
                     string text = DateTime.Now.ToString() + ": [ln:" + numberNumber + "] " + className + ": " + methodName + "() - " + message + " " + obj + ".";
                     writer.WriteLine(text);
                 }
+
+                using (ChevacaDB1 context = new ChevacaDB1())
+                {
+                    logs _logs = new logs();
+                    _logs.Fecha_creado = GlobalVariables.GetCurrentTime();
+                    _logs.Usuario = "Externo";
+                    _logs.Descripcion = message;
+                    _logs.Dato_afectado = "N/D";
+                    _logs.IP_client = "N/D";
+
+                    _logs.Usuario_ID = 0;
+                    context.logs.Add(_logs);
+                    context.SaveChanges();
+                }
             }
             catch (Exception) { }
         }
