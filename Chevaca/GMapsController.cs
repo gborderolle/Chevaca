@@ -44,7 +44,7 @@ namespace Chevaca
         {
             ObjetoJSON objeto = JsonConvert.DeserializeObject<ObjetoJSON>(data_value);
             return Ok("Nombre: " + objeto.nombre + " y appelido: " + objeto.apellido);
-        }        
+        }
 
         [HttpPost]
         public IHttpActionResult SendText(string data_value)
@@ -189,7 +189,8 @@ namespace Chevaca
                     {
                         logs_API _log_API = new logs_API();
                         _log_API.Fecha = DateTime.Now;
-                        //_log_API.Dato_largo = "objectJSON=" + objectJSON.ToString();
+                        _log_API.Dato_completo = "objectJSON=" + objectJSON.objectJSON;
+                        _log_API.Dato_largo = objectJSON.ToString();
                         _log_API.Metodo = "Post";
 
                         context.logs_API.Add(_log_API);
@@ -225,13 +226,13 @@ namespace Chevaca
         {
             public string adr { get; set; }
             public string applicationID { get; set; }
-            public string applicationName{ get; set; }
+            public string applicationName { get; set; }
             public string confirmedUplink { get; set; }
             public string data { get; set; }
             public string devAddr { get; set; }
             public string devEUI { get; set; }
             public string deviceName { get; set; }
-            public string dr{ get; set; }
+            public string dr { get; set; }
             public string fCnt { get; set; }
             public string fPort { get; set; }
             public string objectJSON { get; set; }
@@ -241,7 +242,7 @@ namespace Chevaca
 
             public string toString()
             {
-                return "Objeto JSON";
+                return "{adr:" + adr + ",applicationID:" + applicationID + ",applicationName:" + applicationName + ",confirmedUplink:" + confirmedUplink + ",data:" + data + ",devAddr:" + devAddr + ",devEUI: " + devEUI + ",deviceName: " + deviceName + ",dr: " + dr + ",fCnt: " + fCnt + ",fPort: " + fPort + ",objectJSON: " + objectJSON + ",rxInfo: " + rxInfo + ",txInfo: " + txInfo + "}";
             }
         }
 
