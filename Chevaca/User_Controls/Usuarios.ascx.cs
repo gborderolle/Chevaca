@@ -25,7 +25,7 @@ namespace Chevaca.User_Controls
 
         private void BindGrid()
         {
-            using (ChevacaDB1 context = new ChevacaDB1())
+            using (ChevacaDB context = new ChevacaDB())
             {
                 hdnUsuariosCount.Value = context.usuarios.Count().ToString();
                 if (context.usuarios.Count() > 0)
@@ -113,7 +113,7 @@ namespace Chevaca.User_Controls
                 {
                     if (!string.IsNullOrWhiteSpace(txb1.Text) && !string.IsNullOrWhiteSpace(txb2.Text))
                     {
-                        using (ChevacaDB1 context = new ChevacaDB1())
+                        using (ChevacaDB context = new ChevacaDB())
                         {
                             usuarios obj = new usuarios();
                             obj.Usuario = txb1.Text;
@@ -203,7 +203,7 @@ namespace Chevaca.User_Controls
             TextBox txb3 = row.FindControl("txb3") as TextBox;
             if (txb1 != null && txb2 != null && txb3 != null)
             {
-                using (ChevacaDB1 context = new ChevacaDB1())
+                using (ChevacaDB context = new ChevacaDB())
                 {
                     int Usuario_ID = Convert.ToInt32(gridUsuarios.DataKeys[e.RowIndex].Value);
                     usuarios obj = context.usuarios.First(x => x.Usuario_ID == Usuario_ID);
@@ -249,7 +249,7 @@ namespace Chevaca.User_Controls
 
 
             int Usuario_ID = Convert.ToInt32(gridUsuarios.DataKeys[e.RowIndex].Value);
-            using (ChevacaDB1 context = new ChevacaDB1())
+            using (ChevacaDB context = new ChevacaDB())
             {
                 usuarios obj = context.usuarios.First(x => x.Usuario_ID == Usuario_ID);
                 context.usuarios.Remove(obj);

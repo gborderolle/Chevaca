@@ -19,7 +19,7 @@ namespace Chevaca
             string methodName = stackFrame.GetMethod().Name;
             string exception_message = string.Empty;
 
-            using (ChevacaDB1 context = new ChevacaDB1())
+            using (ChevacaDB context = new ChevacaDB())
             {
                 try
                 {
@@ -35,15 +35,7 @@ namespace Chevaca
                     Logs.AddErrorLog("Excepcion. Usando API HttpPost. ERROR:", className, methodName, ex.Message);
                 }
             }
-
             return "Hello from GMaps Controller";
-        }
-
-        [HttpPost]
-        public IHttpActionResult GeoJson(string data_value)
-        {
-            ObjetoJSON objeto = JsonConvert.DeserializeObject<ObjetoJSON>(data_value);
-            return Ok("Nombre: " + objeto.nombre + " y appelido: " + objeto.apellido);
         }
 
         [HttpPost]
@@ -53,126 +45,7 @@ namespace Chevaca
         }
 
         [HttpPost]
-        public IHttpActionResult SendGeo1(string alt, string hdop, string info, string lat, string lon)
-        {
-            // Logger variables
-            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace(true);
-            System.Diagnostics.StackFrame stackFrame = new System.Diagnostics.StackFrame();
-            string className = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name;
-            string methodName = stackFrame.GetMethod().Name;
-            string exception_message = string.Empty;
-
-            using (ChevacaDB1 context = new ChevacaDB1())
-            {
-                try
-                {
-                    logs_API _log_API = new logs_API();
-                    _log_API.Fecha = DateTime.Now;
-                    _log_API.Dato_completo = "alt=" + alt + "&" + "hdop=" + hdop + "&" + "info=" + info + "&" + "lat=" + lat + "&" + "lon=" + lon;
-                    _log_API.Metodo = "SendGeo1";
-
-                    context.logs_API.Add(_log_API);
-                    context.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    Logs.AddErrorLog("Excepcion. Usando API HttpPost. ERROR:", className, methodName, ex.Message);
-                }
-            }
-            return Ok("OK data: " + info);
-        }
-
-        [HttpPost]
-        public IHttpActionResult SendGeo2(string objectJSON)
-        {
-            // Logger variables
-            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace(true);
-            System.Diagnostics.StackFrame stackFrame = new System.Diagnostics.StackFrame();
-            string className = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name;
-            string methodName = stackFrame.GetMethod().Name;
-            string exception_message = string.Empty;
-
-            using (ChevacaDB1 context = new ChevacaDB1())
-            {
-                try
-                {
-                    logs_API _log_API = new logs_API();
-                    _log_API.Fecha = DateTime.Now;
-                    _log_API.Dato_largo = objectJSON;
-                    _log_API.Metodo = "SendGeo2";
-
-                    context.logs_API.Add(_log_API);
-                    context.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    Logs.AddErrorLog("Excepcion. Usando API HttpPost. ERROR:", className, methodName, ex.Message);
-                }
-            }
-            return Ok("OK data: " + objectJSON);
-        }
-
-        [HttpPost]
-        public IHttpActionResult SendGeo3([FromBody] ObjetoJSON objectJSON)
-        {
-            // Logger variables
-            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace(true);
-            System.Diagnostics.StackFrame stackFrame = new System.Diagnostics.StackFrame();
-            string className = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name;
-            string methodName = stackFrame.GetMethod().Name;
-            string exception_message = string.Empty;
-
-            using (ChevacaDB1 context = new ChevacaDB1())
-            {
-                try
-                {
-                    logs_API _log_API = new logs_API();
-                    _log_API.Fecha = DateTime.Now;
-                    _log_API.Dato_largo = "objectJSON=" + objectJSON.ToString();
-                    _log_API.Metodo = "SendGeo3";
-
-                    context.logs_API.Add(_log_API);
-                    context.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    Logs.AddErrorLog("Excepcion. Usando API HttpPost. ERROR:", className, methodName, ex.Message);
-                }
-            }
-            return Ok("OK data: " + objectJSON);
-        }
-
-        [HttpPost]
-        public IHttpActionResult SendGeo4()
-        {
-            // Logger variables
-            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace(true);
-            System.Diagnostics.StackFrame stackFrame = new System.Diagnostics.StackFrame();
-            string className = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name;
-            string methodName = stackFrame.GetMethod().Name;
-            string exception_message = string.Empty;
-
-            using (ChevacaDB1 context = new ChevacaDB1())
-            {
-                try
-                {
-                    logs_API _log_API = new logs_API();
-                    _log_API.Fecha = DateTime.Now;
-                    _log_API.Metodo = "SendGeo4";
-
-                    context.logs_API.Add(_log_API);
-                    context.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    Logs.AddErrorLog("Excepcion. Usando API HttpPost. ERROR:", className, methodName, ex.Message);
-                }
-            }
-            return Ok("OK data");
-        }
-
-        [HttpPost]
-        public HttpResponseMessage Post([FromBody] ObjetoJSON_2 objectJSON)
+        public HttpResponseMessage Post([FromBody] JSON_Body _objectJSON)
         {
             try
             {
@@ -183,22 +56,42 @@ namespace Chevaca
                 string methodName = stackFrame.GetMethod().Name;
                 string exception_message = string.Empty;
 
-                using (ChevacaDB1 context = new ChevacaDB1())
+                using (ChevacaDB context = new ChevacaDB())
                 {
+
+                    logs_API _log_API = new logs_API();
+                    _log_API.Fecha = GlobalVariables.GetCurrentTime();
+                    _log_API.Gateway = _objectJSON.applicationName;
+                    _log_API.Nodo = _objectJSON.deviceName;
+                    _log_API.Metodo = "Post";
+                    _log_API.Body = _objectJSON.ToString();
+                    
+                    if (!string.IsNullOrWhiteSpace(_objectJSON.objectJSON))
+                    {
+                        Logs.AddUserLog("Intentando crear el JSON", "", "", "");
+
+                        _log_API.JSON = _objectJSON.objectJSON;
+                        JSON_Body_Data _JSON_Body_Data = JsonConvert.DeserializeObject<JSON_Body_Data>(_objectJSON.objectJSON);
+                        if (_JSON_Body_Data != null)
+                        {
+                            _log_API.Altitud = _JSON_Body_Data.alt;
+                            _log_API.Hdop = _JSON_Body_Data.hdop;
+                            _log_API.Latitud = _JSON_Body_Data.lat;
+                            _log_API.Longitud = _JSON_Body_Data.lon;
+                        }
+                        else
+                        {
+                            Logs.AddErrorLog("Excepcion. No pudo crear el JSON:", className, methodName, "");
+                        }
+                    }
                     try
                     {
-                        logs_API _log_API = new logs_API();
-                        _log_API.Fecha = DateTime.Now;
-                        _log_API.Dato_completo = "objectJSON=" + objectJSON.objectJSON;
-                        _log_API.Dato_largo = objectJSON.ToString();
-                        _log_API.Metodo = "Post";
-
                         context.logs_API.Add(_log_API);
                         context.SaveChanges();
                     }
                     catch (Exception ex)
                     {
-                        Logs.AddErrorLog("Excepcion. Usando API HttpPost. ERROR:", className, methodName, ex.Message);
+                        Logs.AddErrorLog("Excepcion. Usando API HttpPost y guardando en BD. ERROR:", className, methodName, ex.Message);
                     }
                 }
                 var message = Request.CreateResponse(System.Net.HttpStatusCode.Created, "OK");
@@ -211,18 +104,7 @@ namespace Chevaca
             }
         }
 
-        public class ObjetoJSON
-        {
-            public string nombre { get; set; }
-            public string apellido { get; set; }
-
-            public string toString()
-            {
-                return "[" + this.nombre + " / " + this.apellido + "]";
-            }
-        }
-
-        public class ObjetoJSON_2
+        public class JSON_Body
         {
             public string adr { get; set; }
             public string applicationID { get; set; }
@@ -240,9 +122,23 @@ namespace Chevaca
             public string tags { get; set; }
             public string txInfo { get; set; }
 
-            public string toString()
+            public override string ToString()
             {
-                return "{adr:" + adr + ",applicationID:" + applicationID + ",applicationName:" + applicationName + ",confirmedUplink:" + confirmedUplink + ",data:" + data + ",devAddr:" + devAddr + ",devEUI: " + devEUI + ",deviceName: " + deviceName + ",dr: " + dr + ",fCnt: " + fCnt + ",fPort: " + fPort + ",objectJSON: " + objectJSON + ",rxInfo: " + rxInfo + ",txInfo: " + txInfo + "}";
+                return "{adr:" + adr + ",applicationID:" + applicationID + ",applicationName:" + applicationName + ",confirmedUplink:" + confirmedUplink + ",data:" + data + ",devAddr:" + devAddr + ",devEUI: " + devEUI + ",deviceName: " + deviceName + ",dr: " + dr + ",fCnt: " + fCnt + ",fPort: " + fPort + ",objectJSON: " + objectJSON.ToString() + ",rxInfo: " + rxInfo + ",txInfo: " + txInfo + "}";
+            }
+        }
+
+        public class JSON_Body_Data
+        {
+            public string alt { get; set; }
+            public string hdop { get; set; }
+            public string info { get; set; }
+            public string lat { get; set; }
+            public string lon { get; set; }
+
+            public override string ToString()
+            {
+                return "{alt:" + alt + ",hdop:" + hdop + ",info:" + info + ",lat:" + lat + ",lon:" + lon + "}";
             }
         }
 

@@ -16,8 +16,14 @@ namespace Chevaca.Models
     {
         public int Log_API_ID { get; set; }
         public System.DateTime Fecha { get; set; }
-        public string Dato_completo { get; set; }
-        public string Dato_largo { get; set; }
         public string Metodo { get; set; }
+        public string Body { get; set; }
+        public string JSON { get; set; }
+        public string Gateway { get; set; }
+        public string Nodo { get; set; }
+        public string Altitud { get; set; }
+        public string Hdop { get; set; }
+        public string Latitud { get; set; }
+        public string Longitud { get; set; }
     }
 }

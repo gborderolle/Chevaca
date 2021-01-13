@@ -1135,13 +1135,16 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\ChevacaDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ChevacaDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <Content Include="Global_Objects\Messages.js" />
-    <Content Include="Models\ChevacaDB.edmx.diagram">
-      <DependentUpon>ChevacaDB.edmx</DependentUpon>
+    <Content Include="Models\ChevacaDB1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ChevacaDB1.edmx</DependentUpon>
+      <LastGenOutput>ChevacaDB1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ChevacaDB1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ChevacaDB1.edmx</DependentUpon>
+      <LastGenOutput>ChevacaDB1.cs</LastGenOutput>
     </Content>
     <Content Include="Pages\GMaps.aspx" />
     <Content Include="Pages\Login.aspx" />
@@ -1185,18 +1188,15 @@
     <Content Include="Content\js\libs\plugins\datatables\extensions\TableTools\Readme.md" />
     <Content Include="Content\js\libs\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Content\js\libs\plugins\input-mask\phone-codes\phone-codes.json" />
+    <EntityDeploy Include="Models\ChevacaDB1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ChevacaDB1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ChevacaDB1.edmx.diagram">
+      <DependentUpon>ChevacaDB1.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\FileSystem.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Models\ChevacaDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ChevacaDB.edmx</DependentUpon>
-      <LastGenOutput>ChevacaDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\ChevacaDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ChevacaDB.edmx</DependentUpon>
-      <LastGenOutput>ChevacaDB.cs</LastGenOutput>
-    </Content>
     <Content Include="Pages\Datos.aspx" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -1370,6 +1370,7 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="API\API_Classes.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -1410,152 +1411,152 @@
     <Compile Include="Global_Objects\Utilities.cs" />
     <Compile Include="GMapsController.cs" />
     <Compile Include="Models\aportes_energias.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\aportes_proteinas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bebederos.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\camioneros.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ChevacaDB.Context.cs">
+    <Compile Include="Models\ChevacaDB1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ChevacaDB.Context.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ChevacaDB.cs">
+    <Compile Include="Models\ChevacaDB1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ChevacaDB.Designer.cs">
+    <Compile Include="Models\ChevacaDB1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ChevacaDB.edmx</DependentUpon>
+      <DependentUpon>ChevacaDB1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\clientes.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\comederos.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\dormideros.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\escritorio_rurales.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\estancias.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\estancia_campos.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\estancia_campos_padrones.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\estancia_campos_potreros.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\frigorificos.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\historial_animales_concursos.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\historial_animales_enfermedades.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\historial_animales_ingestas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\historial_animales_pesadas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\historial_animales_vacunas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ingeniero_agronomos.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lista_animales_categorias.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lista_animales_razas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\logs.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\logs_API.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lotes.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ovejas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ovejas_historial_concursos.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ovejas_historial_enfermedades.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ovejas_historial_ingestas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ovejas_historial_pesadas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ovejas_historial_vacunas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\proveedores.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\raciones.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\raciones_prestaciones.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\raciones_proveedores.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\trabajadores.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\trabajadores_perros.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\usuarios.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\vacas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\vacas_historial_concursos.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\vacas_historial_enfermedades.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\vacas_historial_ingestas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\vacas_historial_pesadas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\vacas_historial_vacunas.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\veterinarias.cs">
-      <DependentUpon>ChevacaDB.tt</DependentUpon>
+      <DependentUpon>ChevacaDB1.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\Datos.aspx.cs">
       <DependentUpon>Datos.aspx</DependentUpon>
@@ -1639,6 +1640,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

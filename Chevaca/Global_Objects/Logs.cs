@@ -37,6 +37,20 @@ namespace Chevaca.Global_Objects
                     string text = DateTime.Now.ToString() + ": [ln:" + numberNumber + "] " + className + ": " + methodName + "() - " + message + " " + obj + ".";
                     writer.WriteLine(text);
                 }
+
+                using (ChevacaDB context = new ChevacaDB())
+                {
+                    logs _logs = new logs();
+                    _logs.Usuario_ID = 0;
+                    _logs.Fecha_creado = GlobalVariables.GetCurrentTime();
+                    _logs.Usuario = "Externo";
+                    _logs.IP_client = "N/D";
+                    _logs.Descripcion = message + "|" + obj;
+                    _logs.Dato_afectado = "N/D";
+
+                    context.logs.Add(_logs);
+                    context.SaveChanges();
+                }
             }
             catch (Exception) { }
         }
@@ -49,7 +63,7 @@ namespace Chevaca.Global_Objects
             string className = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name;
             string methodName = stackFrame.GetMethod().Name;
 
-            using (ChevacaDB1 context = new ChevacaDB1())
+            using (ChevacaDB context = new ChevacaDB())
             {
                 logs _logs = new logs();
                 _logs.Fecha_creado = GlobalVariables.GetCurrentTime();
@@ -59,21 +73,19 @@ namespace Chevaca.Global_Objects
                 _logs.IP_client = IP_client;
 
                 int userID = 0;
-                if (!int.TryParse(userID_str, out userID))
+                if (!string.IsNullOrWhiteSpace(userID_str))
                 {
-                    userID = 0;
-                    AddErrorLog("Excepcion. Convirtiendo int. ERROR:", className, methodName, userID_str);
+                    if (!int.TryParse(userID_str, out userID))
+                    {
+                        userID = 0;
+                        AddErrorLog("Excepcion. Convirtiendo int. ERROR:", className, methodName, userID_str);
+                    }
                 }
 
                 _logs.Usuario_ID = userID;
                 context.logs.Add(_logs);
                 context.SaveChanges();
             }
-        }
-
-        internal static void AddErrorLog(string v, object className, object methodName, string tamano_tipo_ID_str)
-        {
-            throw new NotImplementedException();
         }
 
         public static string GetIPAddress()

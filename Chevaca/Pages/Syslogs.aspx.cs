@@ -25,7 +25,7 @@ namespace Chevaca
 
         private void BindGridLogs(string date_start = "", string date_end = "")
         {
-            using (ChevacaDB1 context = new ChevacaDB1())
+            using (ChevacaDB context = new ChevacaDB())
             {
                 // Logger variables
                 System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace(true);
