@@ -25,7 +25,7 @@ namespace Chevaca.User_Controls
 
         private void BindGrid()
         {
-            using (ChevacaDB1 context = new ChevacaDB1())
+            using (ChevacaDB context = new ChevacaDB())
             {
                 hdnVacasCount.Value = context.vacas.Count().ToString();
                 if (context.vacas.Count() > 0)
@@ -111,7 +111,7 @@ namespace Chevaca.User_Controls
 
                 if (txb1 != null && txb2 != null && txb3 != null)
                 {
-                    using (ChevacaDB1 context = new ChevacaDB1())
+                    using (ChevacaDB context = new ChevacaDB())
                     {
                         #region Agregar registro
 
@@ -205,7 +205,7 @@ namespace Chevaca.User_Controls
             TextBox txb3 = row.FindControl("txb3") as TextBox;
             if (txb1 != null && txb2 != null && txb3 != null)
             {
-                using (ChevacaDB1 context = new ChevacaDB1())
+                using (ChevacaDB context = new ChevacaDB())
                 {
                     #region Update registro 
 
@@ -263,7 +263,7 @@ namespace Chevaca.User_Controls
 
 
             int Usuario_ID = Convert.ToInt32(gridVacas.DataKeys[e.RowIndex].Value);
-            using (ChevacaDB1 context = new ChevacaDB1())
+            using (ChevacaDB context = new ChevacaDB())
             {
                 vacas obj = context.vacas.First(x => x.Vaca_ID == Usuario_ID);
                 context.vacas.Remove(obj);

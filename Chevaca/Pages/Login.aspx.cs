@@ -54,7 +54,7 @@ namespace Chevaca.Pages
             int resultado = 0;
             if (!string.IsNullOrWhiteSpace(username) || !string.IsNullOrWhiteSpace(password))
             {
-                using (ChevacaDB1 context = new ChevacaDB1())
+                using (ChevacaDB context = new ChevacaDB())
                 {
                     try
                     {

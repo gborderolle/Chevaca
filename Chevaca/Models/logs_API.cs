@@ -21,9 +21,9 @@ namespace Chevaca.Models
         public string JSON { get; set; }
         public string Gateway { get; set; }
         public string Nodo { get; set; }
-        public Nullable<int> Altitud { get; set; }
-        public Nullable<decimal> Hdop { get; set; }
-        public Nullable<decimal> Latitud { get; set; }
-        public Nullable<decimal> Longitud { get; set; }
+        public string Altitud { get; set; }
+        public string Hdop { get; set; }
+        public string Latitud { get; set; }
+        public string Longitud { get; set; }
     }
 }

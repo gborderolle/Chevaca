@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="ChevacaDB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="ChevacaDB1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="aportes_energias">
     <Key>
       <PropertyRef Name="Aporte_energia_ID" />
@@ -171,8 +171,8 @@
     <Property Name="Nodo" Type="varchar" MaxLength="50" />
     <Property Name="Altitud" Type="int" />
     <Property Name="Hdop" Type="decimal" Precision="4" Scale="2" />
-    <Property Name="Latitud" Type="decimal" Precision="17" Scale="13" />
-    <Property Name="Longitud" Type="decimal" Precision="17" Scale="13" />
+    <Property Name="Latitud" Type="decimal" Precision="20" Scale="15" />
+    <Property Name="Longitud" Type="decimal" Precision="20" Scale="15" />
   </EntityType>
   <EntityType Name="lotes">
     <Key>
@@ -337,7 +337,7 @@
     <Property Name="Veterinaria_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="ChevacaDBStoreContainer">
+  <EntityContainer Name="ChevacaDB1StoreContainer">
     <EntitySet Name="aportes_energias" EntityType="Self.aportes_energias" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="aportes_proteinas" EntityType="Self.aportes_proteinas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="bebederos" EntityType="Self.bebederos" Schema="dbo" store:Type="Tables" />

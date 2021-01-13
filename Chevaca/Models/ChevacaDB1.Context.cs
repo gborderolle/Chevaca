@@ -13,10 +13,10 @@ namespace Chevaca.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ChevacaDB1 : DbContext
+    public partial class ChevacaDB : DbContext
     {
-        public ChevacaDB1()
-            : base("name=ChevacaDB1")
+        public ChevacaDB()
+            : base("name=ChevacaDB")
         {
         }
     
@@ -46,8 +46,8 @@ namespace Chevaca.Models
         public virtual DbSet<ingeniero_agronomos> ingeniero_agronomos { get; set; }
         public virtual DbSet<lista_animales_categorias> lista_animales_categorias { get; set; }
         public virtual DbSet<lista_animales_razas> lista_animales_razas { get; set; }
-        public virtual DbSet<logs> logs { get; set; }
         public virtual DbSet<lotes> lotes { get; set; }
+        public virtual DbSet<ovejas> ovejas { get; set; }
         public virtual DbSet<ovejas_historial_concursos> ovejas_historial_concursos { get; set; }
         public virtual DbSet<ovejas_historial_enfermedades> ovejas_historial_enfermedades { get; set; }
         public virtual DbSet<ovejas_historial_ingestas> ovejas_historial_ingestas { get; set; }
@@ -60,14 +60,14 @@ namespace Chevaca.Models
         public virtual DbSet<trabajadores> trabajadores { get; set; }
         public virtual DbSet<trabajadores_perros> trabajadores_perros { get; set; }
         public virtual DbSet<usuarios> usuarios { get; set; }
+        public virtual DbSet<vacas> vacas { get; set; }
         public virtual DbSet<vacas_historial_concursos> vacas_historial_concursos { get; set; }
         public virtual DbSet<vacas_historial_enfermedades> vacas_historial_enfermedades { get; set; }
         public virtual DbSet<vacas_historial_ingestas> vacas_historial_ingestas { get; set; }
         public virtual DbSet<vacas_historial_pesadas> vacas_historial_pesadas { get; set; }
         public virtual DbSet<vacas_historial_vacunas> vacas_historial_vacunas { get; set; }
         public virtual DbSet<veterinarias> veterinarias { get; set; }
-        public virtual DbSet<ovejas> ovejas { get; set; }
-        public virtual DbSet<vacas> vacas { get; set; }
+        public virtual DbSet<logs> logs { get; set; }
         public virtual DbSet<logs_API> logs_API { get; set; }
     }
 }

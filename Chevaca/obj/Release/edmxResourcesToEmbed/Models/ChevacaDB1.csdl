@@ -1,18 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="ChevacaDB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="ChevacaDB1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ChevacaDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aportes_energias" EntityType="ChevacaDB1.aportes_energias" />
+    <EntitySet Name="aportes_proteinas" EntityType="ChevacaDB1.aportes_proteinas" />
+    <EntitySet Name="bebederos" EntityType="ChevacaDB1.bebederos" />
+    <EntitySet Name="camioneros" EntityType="ChevacaDB1.camioneros" />
+    <EntitySet Name="clientes" EntityType="ChevacaDB1.clientes" />
+    <EntitySet Name="comederos" EntityType="ChevacaDB1.comederos" />
+    <EntitySet Name="dormideros" EntityType="ChevacaDB1.dormideros" />
+    <EntitySet Name="escritorio_rurales" EntityType="ChevacaDB1.escritorio_rurales" />
+    <EntitySet Name="estancia_campos" EntityType="ChevacaDB1.estancia_campos" />
+    <EntitySet Name="estancia_campos_padrones" EntityType="ChevacaDB1.estancia_campos_padrones" />
+    <EntitySet Name="estancia_campos_potreros" EntityType="ChevacaDB1.estancia_campos_potreros" />
+    <EntitySet Name="estancias" EntityType="ChevacaDB1.estancias" />
+    <EntitySet Name="frigorificos" EntityType="ChevacaDB1.frigorificos" />
+    <EntitySet Name="historial_animales_concursos" EntityType="ChevacaDB1.historial_animales_concursos" />
+    <EntitySet Name="historial_animales_enfermedades" EntityType="ChevacaDB1.historial_animales_enfermedades" />
+    <EntitySet Name="historial_animales_ingestas" EntityType="ChevacaDB1.historial_animales_ingestas" />
+    <EntitySet Name="historial_animales_pesadas" EntityType="ChevacaDB1.historial_animales_pesadas" />
+    <EntitySet Name="historial_animales_vacunas" EntityType="ChevacaDB1.historial_animales_vacunas" />
+    <EntitySet Name="ingeniero_agronomos" EntityType="ChevacaDB1.ingeniero_agronomos" />
+    <EntitySet Name="lista_animales_categorias" EntityType="ChevacaDB1.lista_animales_categorias" />
+    <EntitySet Name="lista_animales_razas" EntityType="ChevacaDB1.lista_animales_razas" />
+    <EntitySet Name="logs" EntityType="ChevacaDB1.logs" />
+    <EntitySet Name="lotes" EntityType="ChevacaDB1.lotes" />
+    <EntitySet Name="ovejas" EntityType="ChevacaDB1.ovejas" />
+    <EntitySet Name="ovejas_historial_concursos" EntityType="ChevacaDB1.ovejas_historial_concursos" />
+    <EntitySet Name="ovejas_historial_enfermedades" EntityType="ChevacaDB1.ovejas_historial_enfermedades" />
+    <EntitySet Name="ovejas_historial_ingestas" EntityType="ChevacaDB1.ovejas_historial_ingestas" />
+    <EntitySet Name="ovejas_historial_pesadas" EntityType="ChevacaDB1.ovejas_historial_pesadas" />
+    <EntitySet Name="ovejas_historial_vacunas" EntityType="ChevacaDB1.ovejas_historial_vacunas" />
+    <EntitySet Name="proveedores" EntityType="ChevacaDB1.proveedores" />
+    <EntitySet Name="raciones" EntityType="ChevacaDB1.raciones" />
+    <EntitySet Name="raciones_prestaciones" EntityType="ChevacaDB1.raciones_prestaciones" />
+    <EntitySet Name="raciones_proveedores" EntityType="ChevacaDB1.raciones_proveedores" />
+    <EntitySet Name="trabajadores" EntityType="ChevacaDB1.trabajadores" />
+    <EntitySet Name="trabajadores_perros" EntityType="ChevacaDB1.trabajadores_perros" />
+    <EntitySet Name="usuarios" EntityType="ChevacaDB1.usuarios" />
+    <EntitySet Name="vacas" EntityType="ChevacaDB1.vacas" />
+    <EntitySet Name="vacas_historial_concursos" EntityType="ChevacaDB1.vacas_historial_concursos" />
+    <EntitySet Name="vacas_historial_enfermedades" EntityType="ChevacaDB1.vacas_historial_enfermedades" />
+    <EntitySet Name="vacas_historial_ingestas" EntityType="ChevacaDB1.vacas_historial_ingestas" />
+    <EntitySet Name="vacas_historial_pesadas" EntityType="ChevacaDB1.vacas_historial_pesadas" />
+    <EntitySet Name="vacas_historial_vacunas" EntityType="ChevacaDB1.vacas_historial_vacunas" />
+    <EntitySet Name="veterinarias" EntityType="ChevacaDB1.veterinarias" />
+    <EntitySet Name="logs_API" EntityType="ChevacaDB1.logs_API" />
+  </EntityContainer>
   <EntityType Name="aportes_energias">
     <Key>
       <PropertyRef Name="Aporte_energia_ID" />
     </Key>
     <Property Name="Aporte_energia_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="aportes_proteinas">
     <Key>
       <PropertyRef Name="Aporte_proteina_ID" />
     </Key>
     <Property Name="Aporte_proteina_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="bebederos">
     <Key>
@@ -25,7 +71,7 @@
       <PropertyRef Name="Camionero_ID" />
     </Key>
     <Property Name="Camionero_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="clientes">
     <Key>
@@ -50,7 +96,7 @@
       <PropertyRef Name="Escritorio_rural_ID" />
     </Key>
     <Property Name="Escritorio_rural_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="estancia_campos">
     <Key>
@@ -78,7 +124,7 @@
       <PropertyRef Name="Estancia_ID" />
     </Key>
     <Property Name="Estancia_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Cliente_ID" Type="Int32" />
   </EntityType>
   <EntityType Name="frigorificos">
@@ -86,7 +132,7 @@
       <PropertyRef Name="Frigorifico_ID" />
     </Key>
     <Property Name="Frigorifico_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="historial_animales_concursos">
     <Key>
@@ -114,7 +160,7 @@
       <PropertyRef Name="Historial_animales_pesadas_ID" />
     </Key>
     <Property Name="Historial_animales_pesadas_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Peso" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Peso" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Animal_ID" Type="Int32" Nullable="false" />
   </EntityType>
@@ -130,21 +176,21 @@
       <PropertyRef Name="Ingeniero_agronomo_ID" />
     </Key>
     <Property Name="Ingeniero_agronomo_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="lista_animales_categorias">
     <Key>
       <PropertyRef Name="Lista_animales_categorias_ID" />
     </Key>
     <Property Name="Lista_animales_categorias_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="lista_animales_razas">
     <Key>
       <PropertyRef Name="Lista_animales_razas_ID" />
     </Key>
     <Property Name="Lista_animales_razas_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="logs">
     <Key>
@@ -153,26 +199,10 @@
     <Property Name="Log_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Usuario_ID" Type="Int32" Nullable="false" />
     <Property Name="Fecha_creado" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="Usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="IP_client" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Dato_afectado" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
-  <EntityType Name="logs_API">
-    <Key>
-      <PropertyRef Name="Log_API_ID" />
-    </Key>
-    <Property Name="Log_API_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="Metodo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="JSON" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="Gateway" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Nodo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Altitud" Type="Int32" />
-    <Property Name="Hdop" Type="Decimal" Precision="4" Scale="2" />
-    <Property Name="Latitud" Type="Decimal" Precision="17" Scale="13" />
-    <Property Name="Longitud" Type="Decimal" Precision="17" Scale="13" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IP_client" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Dato_afectado" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="lotes">
     <Key>
@@ -185,7 +215,7 @@
       <PropertyRef Name="Oveja_ID" />
     </Key>
     <Property Name="Oveja_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Estancia_ID" Type="Int32" Nullable="false" />
     <Property Name="Lista_animales_razas_ID" Type="Int32" />
     <Property Name="Lista_animales_categorias_ID" Type="Int32" />
@@ -216,7 +246,7 @@
       <PropertyRef Name="Historial_animales_pesadas_ID" />
     </Key>
     <Property Name="Historial_animales_pesadas_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Peso" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Peso" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Animal_ID" Type="Int32" Nullable="false" />
   </EntityType>
@@ -232,14 +262,14 @@
       <PropertyRef Name="Proveedor_ID" />
     </Key>
     <Property Name="Proveedor_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="raciones">
     <Key>
       <PropertyRef Name="Racion_ID" />
     </Key>
     <Property Name="Racion_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Aportes_energia_ID" Type="Int32" />
     <Property Name="Aportes_mineral_ID" Type="Int32" />
     <Property Name="Aportes_proteina_ID" Type="Int32" />
@@ -249,7 +279,7 @@
       <PropertyRef Name="Racion_prestacion_ID" />
     </Key>
     <Property Name="Racion_prestacion_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Raciones_ID" Type="Int32" />
   </EntityType>
   <EntityType Name="raciones_proveedores">
@@ -271,15 +301,15 @@
       <PropertyRef Name="Trabajador_perro_ID" />
     </Key>
     <Property Name="Trabajador_perro_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="usuarios">
     <Key>
       <PropertyRef Name="Usuario_ID" />
     </Key>
     <Property Name="Usuario_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Usuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Clave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Clave" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Rol_usuario_ID" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="vacas">
@@ -287,7 +317,7 @@
       <PropertyRef Name="Vaca_ID" />
     </Key>
     <Property Name="Vaca_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Estancia_ID" Type="Int32" Nullable="false" />
     <Property Name="Lista_animales_razas_ID" Type="Int32" />
     <Property Name="Lista_animales_categorias_ID" Type="Int32" />
@@ -319,7 +349,7 @@
       <PropertyRef Name="Historial_animales_pesadas_ID" />
     </Key>
     <Property Name="Historial_animales_pesadas_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Peso" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Peso" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Animal_ID" Type="Int32" Nullable="false" />
   </EntityType>
@@ -335,52 +365,22 @@
       <PropertyRef Name="Veterinaria_ID" />
     </Key>
     <Property Name="Veterinaria_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityContainer Name="ChevacaDB2" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="aportes_energias" EntityType="Self.aportes_energias" />
-    <EntitySet Name="aportes_proteinas" EntityType="Self.aportes_proteinas" />
-    <EntitySet Name="bebederos" EntityType="Self.bebederos" />
-    <EntitySet Name="camioneros" EntityType="Self.camioneros" />
-    <EntitySet Name="clientes" EntityType="Self.clientes" />
-    <EntitySet Name="comederos" EntityType="Self.comederos" />
-    <EntitySet Name="dormideros" EntityType="Self.dormideros" />
-    <EntitySet Name="escritorio_rurales" EntityType="Self.escritorio_rurales" />
-    <EntitySet Name="estancia_campos" EntityType="Self.estancia_campos" />
-    <EntitySet Name="estancia_campos_padrones" EntityType="Self.estancia_campos_padrones" />
-    <EntitySet Name="estancia_campos_potreros" EntityType="Self.estancia_campos_potreros" />
-    <EntitySet Name="estancias" EntityType="Self.estancias" />
-    <EntitySet Name="frigorificos" EntityType="Self.frigorificos" />
-    <EntitySet Name="historial_animales_concursos" EntityType="Self.historial_animales_concursos" />
-    <EntitySet Name="historial_animales_enfermedades" EntityType="Self.historial_animales_enfermedades" />
-    <EntitySet Name="historial_animales_ingestas" EntityType="Self.historial_animales_ingestas" />
-    <EntitySet Name="historial_animales_pesadas" EntityType="Self.historial_animales_pesadas" />
-    <EntitySet Name="historial_animales_vacunas" EntityType="Self.historial_animales_vacunas" />
-    <EntitySet Name="ingeniero_agronomos" EntityType="Self.ingeniero_agronomos" />
-    <EntitySet Name="lista_animales_categorias" EntityType="Self.lista_animales_categorias" />
-    <EntitySet Name="lista_animales_razas" EntityType="Self.lista_animales_razas" />
-    <EntitySet Name="logs" EntityType="Self.logs" />
-    <EntitySet Name="logs_API" EntityType="Self.logs_API" />
-    <EntitySet Name="lotes" EntityType="Self.lotes" />
-    <EntitySet Name="ovejas" EntityType="Self.ovejas" />
-    <EntitySet Name="ovejas_historial_concursos" EntityType="Self.ovejas_historial_concursos" />
-    <EntitySet Name="ovejas_historial_enfermedades" EntityType="Self.ovejas_historial_enfermedades" />
-    <EntitySet Name="ovejas_historial_ingestas" EntityType="Self.ovejas_historial_ingestas" />
-    <EntitySet Name="ovejas_historial_pesadas" EntityType="Self.ovejas_historial_pesadas" />
-    <EntitySet Name="ovejas_historial_vacunas" EntityType="Self.ovejas_historial_vacunas" />
-    <EntitySet Name="proveedores" EntityType="Self.proveedores" />
-    <EntitySet Name="raciones" EntityType="Self.raciones" />
-    <EntitySet Name="raciones_prestaciones" EntityType="Self.raciones_prestaciones" />
-    <EntitySet Name="raciones_proveedores" EntityType="Self.raciones_proveedores" />
-    <EntitySet Name="trabajadores" EntityType="Self.trabajadores" />
-    <EntitySet Name="trabajadores_perros" EntityType="Self.trabajadores_perros" />
-    <EntitySet Name="usuarios" EntityType="Self.usuarios" />
-    <EntitySet Name="vacas" EntityType="Self.vacas" />
-    <EntitySet Name="vacas_historial_concursos" EntityType="Self.vacas_historial_concursos" />
-    <EntitySet Name="vacas_historial_enfermedades" EntityType="Self.vacas_historial_enfermedades" />
-    <EntitySet Name="vacas_historial_ingestas" EntityType="Self.vacas_historial_ingestas" />
-    <EntitySet Name="vacas_historial_pesadas" EntityType="Self.vacas_historial_pesadas" />
-    <EntitySet Name="vacas_historial_vacunas" EntityType="Self.vacas_historial_vacunas" />
-    <EntitySet Name="veterinarias" EntityType="Self.veterinarias" />
-  </EntityContainer>
+  <EntityType Name="logs_API">
+    <Key>
+      <PropertyRef Name="Log_API_ID" />
+    </Key>
+    <Property Name="Log_API_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Metodo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="JSON" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Gateway" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nodo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Altitud" Type="Int32" />
+    <Property Name="Hdop" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="Latitud" Type="Decimal" Precision="20" Scale="15" />
+    <Property Name="Longitud" Type="Decimal" Precision="20" Scale="15" />
+  </EntityType>
 </Schema>
