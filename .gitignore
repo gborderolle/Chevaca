@@ -23,3 +23,5 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+.vs/Chevaca/v16/.suo
+Chevaca/Web.config
