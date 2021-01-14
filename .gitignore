@@ -30,3 +30,5 @@ Chevaca/Web.config
 Chevaca/Web.config
 *.config
 .vs/Chevaca/v16/.suo
+*.config
+.vs/Chevaca/v14/.suo

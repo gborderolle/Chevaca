@@ -68,8 +68,6 @@ namespace Chevaca
                     
                     if (!string.IsNullOrWhiteSpace(_objectJSON.objectJSON))
                     {
-                        Logs.AddUserLog("Intentando crear el JSON", "", "", "");
-
                         _log_API.JSON = _objectJSON.objectJSON;
                         JSON_Body_Data _JSON_Body_Data = JsonConvert.DeserializeObject<JSON_Body_Data>(_objectJSON.objectJSON);
                         if (_JSON_Body_Data != null)

@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title> Chevaca Agrotectnología | <%: Page.Title %> </title>
+    <title> Chevaca Agrotecnología | <%: Page.Title %> </title>
 
     <meta name="description" content="Chevaca Agrotectnología" />
     <meta property="og:title" content="Chevaca Agrotectnología" />
@@ -116,8 +116,7 @@
                         <li><a runat="server" href="/Pages/Datos">Base de datos</a></li>
                         <li><a runat="server" href="/Pages/Syslogs">Logs</a></li>
                         <li><a runat="server" href="">Configuración</a></li>
-                        <%--<li><a runat="server" href="/Pages/GMaps">Google Maps</a></li>--%>
-                        <li><a runat="server" href="/Pages/Testing">Google Maps</a></li>
+                        <li><a runat="server" href="/Pages/GMaps">Mapa de nodos</a></li>
                         
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">

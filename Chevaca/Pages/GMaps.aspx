@@ -70,9 +70,12 @@
 
     <!-- PAGE JS -->
     <script type="text/javascript" src="../Content/js/libs/jquery.tablesorter.js"></script>
-    <script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyB0SMtERQOVpwjLuROR_N2v-S-jEWdcMaM"></script>
-    <script type="text/javascript" src="../Content/js/libs/locationpicker.jquery.js"></script>
 
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5b9fHo2L4fPpJZhRehtJGUjdXfgPkbUE&callback=GMaps_initMap"></script>
+    <script type="text/javascript" src="../Content/js/libs/moment.js"></script>
+
+    <script type="text/javascript" src="../Content/js/helpers/auxiliares.js"></script>
+    <script type="text/javascript" src="../Content/js/pages/gmaps.js"></script>
 
     <!-- PAGE CSS -->
     <link rel="stylesheet" href="../Content/css/helpers/modal_styles.css" />
@@ -83,34 +86,36 @@
 
     <!-- Navegación -->
     <section class="content-header">
-        <h1>Google Maps
+        <h1>Chevaca Nodos
         </h1>
     </section>
 
     <!-- Main content -->
     <section class="content">
-        <button type="button" data-toggle="modal" data-target="#ModalMap" class="btn btn-default">
-            <span class="glyphicon glyphicon-map-marker"></span><span id="ubicacion">Seleccionar ubicación</span>
-        </button>
 
-        <div class="modal fade" id="ModalMap" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="form-horizontal">
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label">Ubicación: </label>
-                                <div class="col-sm-9">
-                                    <asp:TextBox runat="server" ID="ModalMapaddress" CssClass="form-control" />
-                                </div>
-                                <div class="col-sm-1">
-                                    <button class="close" data-dismiss="modal" aria-label="Cerrar">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+        <div class="modal-content">
+
+            <div class="row-short">
+                <div class="col-xs-12 col-sm-6 col-md-3 pull-right">
+                    <div class="input-group" style="padding: 20px;">
+                        <input type="text" id="txtDelay" class="form-control" placeholder="10 segundos" />
+                        <span class="input-group-btn">
+                            <a id="btnSetDelay" role="button" href="#" name="search" class="btn btn-info" onclick="GMaps_initThread_pre()">
+                                <i class="glyphicon glyphicon-cog"></i>
+                            </a>
+                        </span>
                     </div>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div id="GMaps_map_ID" style="width: 100%; height: 400px;"></div>
+                    <div class="clearfix">&nbsp;</div>
+                    <div class="m-t-small">
+                        <button type="button" class="btn btn-warning btn-block" onclick="GMaps_getDevices()">Obtener dispositivos</button>
+                    </div>
+                    <div class="clearfix">&nbsp;</div>
                 </div>
             </div>
         </div>
@@ -119,7 +124,5 @@
         <!-- =========================================================== -->
     </section>
     <!-- /.content -->
-
-
 
 </asp:Content>
