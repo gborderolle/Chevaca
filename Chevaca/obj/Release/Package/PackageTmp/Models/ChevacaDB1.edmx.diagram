@@ -26,7 +26,6 @@
         <EntityTypeShape EntityType="ChevacaDB1.ingeniero_agronomos" Width="1.5" PointX="4.75" PointY="9.75" />
         <EntityTypeShape EntityType="ChevacaDB1.lista_animales_categorias" Width="1.5" PointX="6.75" PointY="9.75" />
         <EntityTypeShape EntityType="ChevacaDB1.lista_animales_razas" Width="1.5" PointX="8.75" PointY="9.75" />
-        <EntityTypeShape EntityType="ChevacaDB1.logs" Width="1.5" PointX="16.75" PointY="0.5" />
         <EntityTypeShape EntityType="ChevacaDB1.lotes" Width="1.5" PointX="10.75" PointY="8.75" />
         <EntityTypeShape EntityType="ChevacaDB1.ovejas" Width="1.5" PointX="10.75" PointY="10.75" />
         <EntityTypeShape EntityType="ChevacaDB1.ovejas_historial_concursos" Width="1.5" PointX="12.75" PointY="0.75" />
@@ -48,7 +47,8 @@
         <EntityTypeShape EntityType="ChevacaDB1.vacas_historial_pesadas" Width="1.5" PointX="2.75" PointY="15.75" />
         <EntityTypeShape EntityType="ChevacaDB1.vacas_historial_vacunas" Width="1.5" PointX="4.75" PointY="15.75" />
         <EntityTypeShape EntityType="ChevacaDB1.veterinarias" Width="1.5" PointX="10.75" PointY="15.75" />
-        <EntityTypeShape EntityType="ChevacaDB1.logs_API" Width="1.5" PointX="13.375" PointY="15.75" />
+        <EntityTypeShape EntityType="ChevacaDB1.logs" Width="1.5" PointX="13.375" PointY="15.75" />
+        <EntityTypeShape EntityType="ChevacaDB1.logs_API" Width="1.5" PointX="15.375" PointY="15.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
