@@ -169,10 +169,10 @@
     <Property Name="JSON" Type="varchar" MaxLength="200" />
     <Property Name="Gateway" Type="varchar" MaxLength="50" />
     <Property Name="Nodo" Type="varchar" MaxLength="50" />
-    <Property Name="Altitud" Type="int" />
-    <Property Name="Hdop" Type="decimal" Precision="4" Scale="2" />
-    <Property Name="Latitud" Type="decimal" Precision="20" Scale="15" />
-    <Property Name="Longitud" Type="decimal" Precision="20" Scale="15" />
+    <Property Name="Altitud" Type="varchar" MaxLength="50" />
+    <Property Name="Hdop" Type="varchar" MaxLength="50" />
+    <Property Name="Latitud" Type="varchar" MaxLength="50" />
+    <Property Name="Longitud" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="lotes">
     <Key>

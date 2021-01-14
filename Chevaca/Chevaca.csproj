@@ -1123,6 +1123,7 @@
     <Content Include="Content\js\libs\plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="Content\js\libs\popbox.js" />
     <Content Include="Content\js\pages\datos.js" />
+    <Content Include="Content\js\pages\gmaps.js" />
     <Content Include="Content\js\pages\login.js" />
     <Content Include="Content\js\pages\syslogs.js" />
     <Content Include="Content\js\Testing.js" />

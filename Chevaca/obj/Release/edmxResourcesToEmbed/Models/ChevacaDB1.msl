@@ -168,19 +168,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="logs">
-      <EntityTypeMapping TypeName="ChevacaDB1.logs">
-        <MappingFragment StoreEntitySet="logs">
-          <ScalarProperty Name="Dato_afectado" ColumnName="Dato_afectado" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="IP_client" ColumnName="IP_client" />
-          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
-          <ScalarProperty Name="Fecha_creado" ColumnName="Fecha_creado" />
-          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
-          <ScalarProperty Name="Log_ID" ColumnName="Log_ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="lotes">
       <EntityTypeMapping TypeName="ChevacaDB1.lotes">
         <MappingFragment StoreEntitySet="lotes">
@@ -362,6 +349,19 @@
         <MappingFragment StoreEntitySet="veterinarias">
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Veterinaria_ID" ColumnName="Veterinaria_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logs">
+      <EntityTypeMapping TypeName="ChevacaDB1.logs">
+        <MappingFragment StoreEntitySet="logs">
+          <ScalarProperty Name="Dato_afectado" ColumnName="Dato_afectado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IP_client" ColumnName="IP_client" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Fecha_creado" ColumnName="Fecha_creado" />
+          <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+          <ScalarProperty Name="Log_ID" ColumnName="Log_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

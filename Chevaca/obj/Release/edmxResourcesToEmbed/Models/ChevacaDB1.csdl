@@ -22,7 +22,6 @@
     <EntitySet Name="ingeniero_agronomos" EntityType="ChevacaDB1.ingeniero_agronomos" />
     <EntitySet Name="lista_animales_categorias" EntityType="ChevacaDB1.lista_animales_categorias" />
     <EntitySet Name="lista_animales_razas" EntityType="ChevacaDB1.lista_animales_razas" />
-    <EntitySet Name="logs" EntityType="ChevacaDB1.logs" />
     <EntitySet Name="lotes" EntityType="ChevacaDB1.lotes" />
     <EntitySet Name="ovejas" EntityType="ChevacaDB1.ovejas" />
     <EntitySet Name="ovejas_historial_concursos" EntityType="ChevacaDB1.ovejas_historial_concursos" />
@@ -44,6 +43,7 @@
     <EntitySet Name="vacas_historial_pesadas" EntityType="ChevacaDB1.vacas_historial_pesadas" />
     <EntitySet Name="vacas_historial_vacunas" EntityType="ChevacaDB1.vacas_historial_vacunas" />
     <EntitySet Name="veterinarias" EntityType="ChevacaDB1.veterinarias" />
+    <EntitySet Name="logs" EntityType="ChevacaDB1.logs" />
     <EntitySet Name="logs_API" EntityType="ChevacaDB1.logs_API" />
   </EntityContainer>
   <EntityType Name="aportes_energias">
@@ -191,18 +191,6 @@
     </Key>
     <Property Name="Lista_animales_razas_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="logs">
-    <Key>
-      <PropertyRef Name="Log_ID" />
-    </Key>
-    <Property Name="Log_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Usuario_ID" Type="Int32" Nullable="false" />
-    <Property Name="Fecha_creado" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="IP_client" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="Dato_afectado" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="lotes">
     <Key>
@@ -367,6 +355,18 @@
     <Property Name="Veterinaria_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="logs">
+    <Key>
+      <PropertyRef Name="Log_ID" />
+    </Key>
+    <Property Name="Log_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario_ID" Type="Int32" Nullable="false" />
+    <Property Name="Fecha_creado" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IP_client" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Dato_afectado" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="logs_API">
     <Key>
       <PropertyRef Name="Log_API_ID" />
@@ -378,9 +378,9 @@
     <Property Name="JSON" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="Gateway" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Nodo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Altitud" Type="Int32" />
-    <Property Name="Hdop" Type="Decimal" Precision="4" Scale="2" />
-    <Property Name="Latitud" Type="Decimal" Precision="20" Scale="15" />
-    <Property Name="Longitud" Type="Decimal" Precision="20" Scale="15" />
+    <Property Name="Altitud" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Hdop" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Latitud" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Longitud" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

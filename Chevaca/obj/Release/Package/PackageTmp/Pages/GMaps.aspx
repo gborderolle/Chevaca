@@ -6,7 +6,7 @@
     <!-- STYLES EXTENSION -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <%--<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>--%>
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
     <!-- Theme style -->
@@ -70,14 +70,12 @@
 
     <!-- PAGE JS -->
     <script type="text/javascript" src="../Content/js/libs/jquery.tablesorter.js"></script>
-    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&libraries=places&key=AIzaSyB0SMtERQOVpwjLuROR_N2v-S-jEWdcMaM"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyB0SMtERQOVpwjLuROR_N2v-S-jEWdcMaM"></script>
     <script type="text/javascript" src="../Content/js/libs/locationpicker.jquery.js"></script>
 
 
     <!-- PAGE CSS -->
     <link rel="stylesheet" href="../Content/css/helpers/modal_styles.css" />
-
-
 
 </asp:Content>
 

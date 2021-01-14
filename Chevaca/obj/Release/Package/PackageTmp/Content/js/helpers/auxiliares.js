@@ -86,3 +86,10 @@ function roundUp(number, precision) {
     Math.ceil(number * precision) / precision;
 }
 
+function check_nullValues(value) {
+    var value_return = value;
+    if (value === null || value === undefined) {
+        value_return = "";
+    }
+    return value_return;
+}
