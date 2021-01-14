@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Chevaca.Pages {
-    
-    
-    public partial class Testing {
-        
+namespace Chevaca.Pages
+{
+
+
+    public partial class Testing
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,32 +22,14 @@ namespace Chevaca.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
-        /// ModalMapaddress control.
+        /// txtDelay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ModalMapaddress;
-        
-        /// <summary>
-        /// ModalMapLat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ModalMapLat;
-        
-        /// <summary>
-        /// ModalMapLon control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ModalMapLon;
+        protected global::System.Web.UI.WebControls.TextBox txtDelay;
     }
 }

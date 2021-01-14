@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Services;
 using System.Web.UI;
@@ -13,11 +14,39 @@ namespace Chevaca.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Get_Devices_Automatic();
         }
+
+        private void Get_Devices_Automatic()
+        {
+            string delay_str = txtDelay.Text;
+            int delay_int = 1;
+            if (!int.TryParse(delay_str, out delay_int)) {
+                delay_int = 1;
+            }
+
+            // S: https://www.youtube.com/watch?v=8mjqXiggWNc&ab_channel=kudvenkat
+            Thread workThread = new Thread(Get_Devices_Automatic_Thread);
+            workThread.Start();
+        }
+
+        private void Get_Devices_Automatic_Thread(int delay_int)
+        {
+            while (true)
+            {
+                get_db().ToArray();
+                Thread.Sleep(delay_int * 1000);
+            }
+        }
+
 
         [WebMethod]
         public static _Log_Devices[] Get_Devices(string dummy)
+        {
+            return get_db().ToArray();
+        }
+
+        public static List<_Log_Devices> get_db()
         {
             List<_Log_Devices> _Log_Devices_list = new List<_Log_Devices>();
 
@@ -48,13 +77,13 @@ namespace Chevaca.Pages
 
                         _Log_Devices_list.Add(_Log_Devices1);
                     }
-
                 } // foreach
             }
-            return _Log_Devices_list.ToArray();
+            return _Log_Devices_list;
         }
-
     }
+
+    
 
     public class _Log_Devices
     {
